@@ -7,7 +7,10 @@ FILES :=                    \
     Coverage2               \
     Coverage3               \
     IsPrime1                \
-    Exceptions
+    IsPrime2                \
+    Exceptions              \
+    Types                   \
+    Operators
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3

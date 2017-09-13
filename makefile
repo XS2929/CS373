@@ -101,6 +101,8 @@ sync:
     --include "IsPrime1.py"                  \
     --include "IsPrime2.py"                  \
     --include "Exceptions.py"                \
+    --include "Types.py"                     \
+    --include "Operators.py"                 \
     --exclude "*"                            \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete             \
