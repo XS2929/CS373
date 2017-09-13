@@ -118,7 +118,6 @@ travis:
 	@echo
 	cd projects/collatz; make travis
 
-
 versions:
 	which cmake
 	cmake --version

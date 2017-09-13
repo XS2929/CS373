@@ -24,7 +24,5 @@ before_script:
 
 script:
     - cat makefile
-    - cat examples/makefile
-    - cat projects/collatz/makefile
     - make versions
     - make travis

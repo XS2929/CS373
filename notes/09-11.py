@@ -144,7 +144,6 @@ a raise in an except clause always goes to the next higher try block
 
 except clauses of types in a class hierarchy must list children first
 
-
 Questions:
     What were the two bugs in IsPrime1?
     What was the inefficiency in IsPrime1?
