@@ -35,7 +35,7 @@ else ifeq ($(CI), true)                # Travis CI
     MYPY     := mypy
     PYLINT   := pylint
     COVERAGE := coverage-3.5
-    PYDOC    := pydoc
+    PYDOC    := pydoc3.5
     AUTOPEP8 := autopep8
 else ifeq ($(shell uname -p), unknown) # Docker
     PYTHON   := python3.5
