@@ -21,10 +21,10 @@ def test () :
         assert f(False) == 0
     except NameError :       # pragma: no cover
         assert False
-    else :                   # no exception vs. raised and handled
-        pass                 # but not with break, continue, return
-    finally :                # always
-        pass                 # even with break, continue, return
+    else :                   # no exception vs. raised and handled, but not with break, continue, return
+        pass
+    finally :                # always, even with break, continue, return
+        pass
 
     try :
         assert f(True) == 1

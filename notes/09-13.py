@@ -1,5 +1,5 @@
 # -----------
-# Mon, 11 Sep
+# Wed, 13 Sep
 # -----------
 
 """
@@ -55,30 +55,32 @@ class A { # creates an instance of class class
 
 class T {
     public static void main (...) {
-        x = new A(...);
+        x = new A(...); # creates an instance of class A
 
 # in Python
 
 class type :
     ...
 
-class A : # creates an instance of class type
+class A : # creates an instance of type type
     pass
+
+x = A() # creates an instance of type A
 
 x = {}
 print(type(x)) # dict
 
 """
 in terms of mutability
-    set is like list
+    set       is like list
     frozenset is like tuple
 
 in Java
     TreeSet: red black binary search tree
-    cost of anything: log n
+    usual cost: O(log n)
 
     HashSet: hash table
-    cost of anything: O(1)
+    usual cost: O(1)
 
 in Python
     set, dict: hash table
@@ -86,63 +88,22 @@ in Python
     the hashables are the immutables
 
     immutables
-        frozenset
         tuple
         str
+        frozenset
 
     mutables
         list
         set
         dict
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Questions:
+    What Java   operator compares identity?
+    What Python operator compares identity?
+    What Java   operator compares value?
+    What Python operator compares value?
+    How do you specify a one-arg tuple?
+    What does isinstance() do?
+    What does issubclass() do?
+    What constraints does set have, compared to list?
+"""
