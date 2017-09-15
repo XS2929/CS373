@@ -12,8 +12,9 @@
 # Types.py
 # --------
 
-from typing import Dict, FrozenSet, List, Set, Tuple
-from types  import FunctionType
+from collections import deque
+from typing      import Dict, FrozenSet, List, Set, Tuple
+from types       import FunctionType
 
 print("Types.py")
 
@@ -99,6 +100,13 @@ assert isinstance(d,    dict)
 assert isinstance(dict, type)
 assert issubclass(dict, dict)
 assert issubclass(dict, object)
+
+q = deque()                      # type: deque
+q = deque((2, "abc", 3.45))      # FIFO or LIFO queue
+assert isinstance(q,    deque)
+assert isinstance(deque, type)
+assert issubclass(deque, deque)
+assert issubclass(deque, object)
 
 def g (v) :
     return v + 1
