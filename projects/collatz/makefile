@@ -13,7 +13,6 @@ FILES2 :=           \
     RunCollatz.in   \
     RunCollatz.out  \
     RunCollatz.py   \
-    TestCollatz.out \
     TestCollatz.py
 
 # uncomment these:
