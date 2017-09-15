@@ -103,6 +103,7 @@ sync:
     --include "Exceptions.py"                \
     --include "Types.py"                     \
     --include "Operators.py"                 \
+    --include "Variables.py"                 \
     --exclude "*"                            \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete             \

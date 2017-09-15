@@ -209,17 +209,6 @@ i, j = j, i
 assert i == 12
 assert j == 10
 
-i = 8
-j = not i & (i - 1)
-assert j is True    # power of 2
-
-i = 13           # 1101
-j =  0
-while i != 0 :
-    i &= (i - 1)
-    j += 1
-assert j == 3    # number of bits
-
 i = 3
 j = 5
 k = 7

@@ -10,7 +10,8 @@ FILES :=                    \
     IsPrime2                \
     Exceptions              \
     Types                   \
-    Operators
+    Operators               \
+    Variables
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3
