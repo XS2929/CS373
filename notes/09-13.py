@@ -97,7 +97,7 @@ in Python
         set
         dict
 
-Questions:
+Questions
     What Java   operator compares identity?
     What Python operator compares identity?
     What Java   operator compares value?
