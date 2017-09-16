@@ -1,7 +1,8 @@
 FROM python:3.5.2
 
-RUN apt-get update            && \
-    apt-get -y install cmake  && \
+RUN apt-get update              && \
+    apt-get -y install cmake    && \
+    apt-get -y install graphviz && \
     apt-get -y install vim
 
 RUN pip install --upgrade pip && \

@@ -23,7 +23,7 @@ def cycle_length (n: int) -> int :
     assert c > 0
     return c
 
-if __name__ == "__main__" : # pragma: no cover
+if __name__ == "__main__" :      # pragma: no cover
     print("Assertions.py")
 
     assert cycle_length( 1) == 1

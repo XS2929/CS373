@@ -14,7 +14,7 @@
 # https://www.python.org/dev/peps/pep-0008/
 # http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html
 
-if __name__ == "__main__" : # pragma: no cover
+if __name__ == "__main__" :      # pragma: no cover
     print("Nothing to be done.")
 
 """ #pragma: no cover
