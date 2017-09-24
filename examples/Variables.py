@@ -96,7 +96,6 @@ def test () :
     assert u is v
     #v = v + [5]  # TypeError: can only concatenate tuple (not "list") to tuple
 
-
 if __name__ == "__main__" : # pragma: no cover
     print("Variables.py")
     test()

@@ -11,7 +11,8 @@ FILES :=                    \
     Exceptions              \
     Types                   \
     Operators               \
-    Variables
+    Variables               \
+    Iteration
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3
