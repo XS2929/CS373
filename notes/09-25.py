@@ -7,4 +7,7 @@ operator functions
 is vs ==
 list  +=, +
 tuple +=, +
+
+Factorial
+iteration
 """
