@@ -8,7 +8,6 @@
 # IsPrime2.py
 # -----------
 
-from math     import sqrt
 from unittest import main, TestCase
 
 def is_prime (n: int) -> bool :
@@ -17,9 +16,11 @@ def is_prime (n: int) -> bool :
         return True
     if (n == 1) or ((n % 2) == 0) :
         return False
-    for i in range(3, int(sqrt(n)) + 1, 2) :
+    i = 3
+    while (i * i) <= n :
         if (n % i) == 0 :
             return False
+        i += 2
     return True
 
 class MyUnitTests (TestCase) :
