@@ -12,6 +12,7 @@ FILES :=                    \
     Types                   \
     Operators               \
     Variables               \
+    Factorial               \
     Iteration
 
 ifeq ($(shell uname), Darwin)          # Apple
