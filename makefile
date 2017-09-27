@@ -104,8 +104,9 @@ sync:
     --include "Types.py"                     \
     --include "Operators.py"                 \
     --include "Variables.py"                 \
-    --include "Iteration.py"                 \
     --include "Factorial.py"                 \
+    --include "Iteration.py"                 \
+    --include "Comprehensions.py"            \
     --exclude "*"                            \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete             \

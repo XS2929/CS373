@@ -13,7 +13,8 @@ FILES :=                    \
     Operators               \
     Variables               \
     Factorial               \
-    Iteration
+    Iteration               \
+    Comprehensions
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3
