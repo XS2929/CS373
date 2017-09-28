@@ -13,6 +13,7 @@ FILES :=                    \
     Operators               \
     Variables               \
     Factorial               \
+    Reduce                  \
     Iteration               \
     Comprehensions
 

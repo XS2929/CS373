@@ -105,6 +105,7 @@ sync:
     --include "Operators.py"                 \
     --include "Variables.py"                 \
     --include "Factorial.py"                 \
+    --include "Reduce.py"                    \
     --include "Iteration.py"                 \
     --include "Comprehensions.py"            \
     --exclude "*"                            \
