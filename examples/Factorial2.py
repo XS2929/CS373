@@ -3,10 +3,11 @@
 # pylint: disable = bad-whitespace
 # pylint: disable = invalid-name
 # pylint: disable = missing-docstring
+# pylint: disable = pointless-string-statement
 
-# ------------
-# Factorial.py
-# ------------
+# -------------
+# Factorial2.py
+# -------------
 
 # https://docs.python.org/3.4/library/math.html
 

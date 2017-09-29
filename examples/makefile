@@ -14,7 +14,8 @@ FILES :=                    \
     Variables               \
     Factorial1              \
     Factorial2              \
-    Reduce                  \
+    Reduce1                 \
+    Reduce2                 \
     Iteration               \
     Comprehensions          \
     Yield

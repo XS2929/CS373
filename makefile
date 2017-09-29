@@ -106,7 +106,8 @@ sync:
     --include "Variables.py"                 \
     --include "Factorial1.py"                \
     --include "Factorial2.py"                \
-    --include "Reduce.py"                    \
+    --include "Reduce1.py"                   \
+    --include "Reduce2.py"                   \
     --include "Iteration.py"                 \
     --include "Comprehensions.py"            \
     --include "Yield.py"                     \
