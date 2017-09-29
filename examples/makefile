@@ -15,7 +15,8 @@ FILES :=                    \
     Factorial               \
     Reduce                  \
     Iteration               \
-    Comprehensions
+    Comprehensions          \
+    Yield
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3
