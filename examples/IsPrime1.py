@@ -8,8 +8,7 @@
 # IsPrime1.py
 # -----------
 
-from math     import sqrt
-from unittest import main, TestCase
+from math import sqrt
 
 def is_prime (n: int) -> bool :
     assert n > 0
@@ -20,33 +19,20 @@ def is_prime (n: int) -> bool :
             return False
     return True
 
-class MyUnitTests (TestCase) :
-    def test_01 (self) :
-        self.assertFalse(is_prime(1))
+def test (f) :
+    print("IsPrime1.py")
 
-    def test_02 (self) :
-        self.assertFalse(is_prime(2))
+    assert not f(1)
+    assert not f(2)
+    assert     f(3)
+    assert not f(4)
+    assert     f(5)
+    assert     f(7)
+    assert     f(9)
+    assert not f(27)
+    assert     f(29)
 
-    def test_03 (self) :
-        self.assertTrue(is_prime(3))
-
-    def test_04 (self) :
-        self.assertFalse(is_prime(4))
-
-    def test_05 (self) :
-        self.assertTrue(is_prime(5))
-
-    def test_07 (self) :
-        self.assertTrue(is_prime(7))
-
-    def test_09 (self) :
-        self.assertTrue(is_prime(9))
-
-    def test_27 (self) :
-        self.assertFalse(is_prime(27))
-
-    def test_29 (self) :
-        self.assertTrue(is_prime(29))
+    print("Done.")
 
 if __name__ == "__main__" : # pragma: no cover
-    main()
+    test(is_prime)

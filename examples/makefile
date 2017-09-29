@@ -12,7 +12,8 @@ FILES :=                    \
     Types                   \
     Operators               \
     Variables               \
-    Factorial               \
+    Factorial1              \
+    Factorial2              \
     Reduce                  \
     Iteration               \
     Comprehensions          \

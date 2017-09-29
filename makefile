@@ -104,7 +104,8 @@ sync:
     --include "Types.py"                     \
     --include "Operators.py"                 \
     --include "Variables.py"                 \
-    --include "Factorial.py"                 \
+    --include "Factorial1.py"                \
+    --include "Factorial2.py"                \
     --include "Reduce.py"                    \
     --include "Iteration.py"                 \
     --include "Comprehensions.py"            \
