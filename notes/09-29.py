@@ -51,3 +51,11 @@ f(next(p))
 # different processing for the remaining elements
 for v in p :
     g(v)
+
+"""
+Questions
+    What is the l-value / r-value nature of the [] operator for list, range, str, and tuple?
+    What makes something iterable?
+    What makes something an iterator?
+    Are iterators iterable? How?
+"""
