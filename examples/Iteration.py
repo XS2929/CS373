@@ -134,8 +134,9 @@ def test () :
 
     c = count()                          # 0, 1, 2, ...
     assert     hasattr(c, "__next__")
+    assert     hasattr(c, "__iter__")
     assert not hasattr(c, "__getitem__")
-    #assert c[0] == 0                    # TypeError: 'itertools.count' object is not indexable
+    assert iter(c) is c
     for v in c :
         assert v >= 0
         if v == 10 :
@@ -152,6 +153,10 @@ def test () :
             break
 
     z = zip([2, 3], [4, 5, 6])
+    assert     hasattr(z, "__next__")
+    assert     hasattr(z, "__iter__")
+    assert not hasattr(z, "__getitem__")
+    assert iter(z) is z
     assert list(z) == [(2, 4), (3, 5)]
     assert list(z) == []
 
