@@ -16,18 +16,18 @@ from unittest  import main, TestCase
 
 T = TypeVar("T")
 
-def reduce_for_range (bf: Callable[[T, T], T], a: Sequence[T], v: T) :
+def reduce_for_range (bf: Callable[[T, T], T], a: Sequence[T], v: T) -> T :
     for i in range(len(a)) :
         w = a[i]
         v = bf(v, w)
     return v
 
-def reduce_for (bf: Callable[[T, T], T], a: Iterable[T], v: T) :
+def reduce_for (bf: Callable[[T, T], T], a: Iterable[T], v: T) -> T :
     for w in a :
         v = bf(v, w)
     return v
 
-def reduce_while (bf: Callable[[T, T], T], a: Iterable[T], v: T) :
+def reduce_while (bf: Callable[[T, T], T], a: Iterable[T], v: T) -> T :
     p = iter(a)
     try :
         while True :

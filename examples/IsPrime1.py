@@ -8,7 +8,10 @@
 # IsPrime1.py
 # -----------
 
-from math import sqrt
+from math   import sqrt
+from typing import Callable, TypeVar
+
+T = TypeVar("T")
 
 def is_prime (n: int) -> bool :
     assert n > 0
@@ -19,7 +22,7 @@ def is_prime (n: int) -> bool :
             return False
     return True
 
-def test (f) :
+def test (f: Callable[[int], bool]) -> None :
     print("IsPrime1.py")
 
     assert not f(1)

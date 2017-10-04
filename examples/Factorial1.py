@@ -13,6 +13,9 @@
 from functools import reduce
 from math      import factorial
 from operator  import mul
+from typing    import Callable, TypeVar
+
+T = TypeVar("T")
 
 # recursive procedure
 # linear recursive process
@@ -73,7 +76,7 @@ def factorial_range_reduce (n: int) -> int :
     assert n >= 0
     return reduce(mul, range(1, n + 1), 1)
 
-def test (f) :
+def test (f: Callable[[int], int]) -> None :
     assert f(0) == 1
     assert f(1) == 1
     assert f(2) == 2
