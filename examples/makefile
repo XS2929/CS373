@@ -18,7 +18,8 @@ FILES :=                    \
     Reduce2                 \
     Iteration               \
     Comprehensions          \
-    Yield
+    Yield                   \
+    Iterables
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3

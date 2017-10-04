@@ -111,6 +111,7 @@ sync:
     --include "Iteration.py"                 \
     --include "Comprehensions.py"            \
     --include "Yield.py"                     \
+    --include "Iterables.py"                 \
     --exclude "*"                            \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete             \
