@@ -5,4 +5,7 @@
 """
 yield
 map()
+iterables
+RangeIterator
+Range
 """
