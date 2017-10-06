@@ -19,6 +19,8 @@ FILES :=                    \
     Iteration               \
     Comprehensions          \
     Yield                   \
+    Map1                    \
+    Map2                    \
     Iterables
 
 ifeq ($(shell uname), Darwin)          # Apple

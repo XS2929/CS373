@@ -111,6 +111,8 @@ sync:
     --include "Iteration.py"                 \
     --include "Comprehensions.py"            \
     --include "Yield.py"                     \
+    --include "Map1.py"                      \
+    --include "Map2.py"                      \
     --include "Iterables.py"                 \
     --exclude "*"                            \
     ../../examples/python/ examples
