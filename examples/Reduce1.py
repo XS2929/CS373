@@ -11,43 +11,14 @@
 
 from functools import reduce
 from operator  import add, concat, mul
-from typing    import Callable, Iterable, Sequence, TypeVar
 
-T = TypeVar("T")
-
-def reduce_for_range (bf: Callable[[T, T], T], a: Sequence[T], v: T) -> T :
-    for i in range(len(a)) :
-        w = a[i]
-        v = bf(v, w)
-    return v
-
-def reduce_for (bf: Callable[[T, T], T], a: Iterable[T], v: T) -> T :
-    for w in a :
-        v = bf(v, w)
-    return v
-
-def reduce_while (bf: Callable[[T, T], T], a: Iterable[T], v: T) -> T :
-    p = iter(a)
-    try :
-        while True :
-            w = next(p)
-            v = bf(v, w)
-    except StopIteration :
-        pass
-    return v
-
-def test (f: Callable) :
-    assert f(add,    [2, 3, 4],  0)   == 9
-    assert f(mul,    [2, 3, 4],  1)   == 24
-    assert f(concat, ["b", "c"], "a") == "abc"
-    assert f(None,   [],         2)   == 2
+def test () :
+    assert reduce(add,    [2, 3, 4],  0)   == 9
+    assert reduce(mul,    [2, 3, 4],  1)   == 24
+    assert reduce(concat, ["b", "c"], "a") == "abc"
+    assert reduce(None,   [],         2)   == 2
 
 if __name__ == "__main__" : # pragma: no cover
     print("Reduce1.py")
-
-    test(reduce_for_range)
-    test(reduce_for)
-    test(reduce_while)
-    test(reduce)
-
+    test()
     print("Done.")

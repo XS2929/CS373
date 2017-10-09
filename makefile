@@ -114,6 +114,11 @@ sync:
     --include "Map1.py"                      \
     --include "Map2.py"                      \
     --include "Iterables.py"                 \
+    --include "FunctionKeywords.py"          \
+    --include "FunctionDefaults.py"          \
+    --include "FunctionUnpacking.py"         \
+    --include "FunctionTuple.py"             \
+    --include "FunctionDict.py"              \
     --exclude "*"                            \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete             \

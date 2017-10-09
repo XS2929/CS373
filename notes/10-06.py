@@ -31,3 +31,9 @@ print(v)    # 2
 v = next(x) # def
 print(v)    # 3
 v = next(x) # ghi; raise a StopIteration exception
+
+"""
+Questions
+    Does a lambda    capture variables or the values that the variables refer to?
+    Does a generator capture variables or the values that the variables refer to?
+"""

@@ -21,7 +21,12 @@ FILES :=                    \
     Yield                   \
     Map1                    \
     Map2                    \
-    Iterables
+    Iterables               \
+    FunctionKeywords        \
+    FunctionDefaults        \
+    FunctionUnpacking       \
+    FunctionTuple           \
+    FunctionDict
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3

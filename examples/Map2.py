@@ -15,36 +15,36 @@
 
 from timeit   import timeit
 from unittest import main, TestCase
-from typing   import Callable, Iterable, Sequence, TypeVar
+from typing   import Callable, Iterable, Iterator, Sequence, TypeVar
 
 T = TypeVar("T")
 
-class Map_Iterator :
+class map_iterator (Iterator[T]) :
     def __init__ (self, uf: Callable[[T], T], a: Iterable[T]) -> None :
         self.uf = uf
         self.p  = iter(a)
 
-    def __iter__ (self) :
+    def __iter__ (self) -> Iterator[T] :
         return self
 
     def __next__ (self) -> T :
         return self.uf(next(self.p))
 
-def map_for_range (uf: Callable[[T], T], a: Sequence[T]) -> Iterable[T] :
+def map_for_range (uf: Callable[[T], T], a: Sequence[T]) -> Iterator[T] :
     for i in range(len(a)) :
         yield uf(a[i])
 
-def map_for (uf: Callable[[T], T], a: Iterable[T]) -> Iterable[T] :
+def map_for (uf: Callable[[T], T], a: Iterable[T]) -> Iterator[T] :
     for v in a :
         yield uf(v)
 
-def map_generator (uf: Callable[[T], T], a: Iterable[T]) -> Iterable[T] :
+def map_generator (uf: Callable[[T], T], a: Iterable[T]) -> Iterator[T] :
     return (uf(v) for v in a)
 
 class MyUnitTests (TestCase) :
     def setUp (self) :
         self.a = [
-            Map_Iterator,
+            map_iterator,
             map_for_range,
             map_for,
             map_generator,
@@ -53,17 +53,17 @@ class MyUnitTests (TestCase) :
     def test_1 (self) :
         for f in self.a :
             with self.subTest(msg=f.__name__) :
-                x = f(lambda v : v ** 2, (2, 3, 4))
-                self.assertEqual(list(x), [4, 9, 16])
-                self.assertEqual(list(x), [])
+                m = f(lambda v : v ** 2, (2, 3, 4))
+                self.assertEqual(list(m), [4, 9, 16])
+                self.assertEqual(list(m), [])
 
     def test_2 (self) :
         p = 2
         for f in self.a :
             with self.subTest(msg=f.__name__) :
-                x = f(lambda v : v ** p, (2, 3, 4))
-                self.assertEqual(list(x), [4, 9, 16])
-                self.assertEqual(list(x), [])
+                m = f(lambda v : v ** p, (2, 3, 4))
+                self.assertEqual(list(m), [4, 9, 16])
+                self.assertEqual(list(m), [])
 
     def test_3 (self) :
         for f in self.a :
@@ -88,7 +88,7 @@ if __name__ == "__main__" : # pragma: no cover
 """ #pragma: no cover
 % MapT
 ....
-Map_Iterator
+map_iterator
 645.18 milliseconds
 
 map_for_range
