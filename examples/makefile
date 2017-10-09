@@ -22,6 +22,10 @@ FILES :=                    \
     Map1                    \
     Map2                    \
     Iterables               \
+    RangeIterator1          \
+    RangeIterator2          \
+    Range1                  \
+    Range2                  \
     FunctionKeywords        \
     FunctionDefaults        \
     FunctionUnpacking       \

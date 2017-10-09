@@ -114,6 +114,10 @@ sync:
     --include "Map1.py"                      \
     --include "Map2.py"                      \
     --include "Iterables.py"                 \
+    --include "RangeIterator1.py"            \
+    --include "RangeIterator2.py"            \
+    --include "Range1.py"                    \
+    --include "Range2.py"                    \
     --include "FunctionKeywords.py"          \
     --include "FunctionDefaults.py"          \
     --include "FunctionUnpacking.py"         \

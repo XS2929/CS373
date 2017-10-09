@@ -5,7 +5,7 @@
 """
 yield
 map()
-iterables
+iterables vs. iterators
 """
 
 """
