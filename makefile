@@ -123,6 +123,10 @@ sync:
     --include "FunctionUnpacking.py"         \
     --include "FunctionTuple.py"             \
     --include "FunctionDict.py"              \
+    --include "Select1.py"                   \
+    --include "Select2.py"                   \
+    --include "Project1.py"                  \
+    --include "Project2.py"                  \
     --exclude "*"                            \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete             \

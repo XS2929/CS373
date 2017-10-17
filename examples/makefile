@@ -30,7 +30,11 @@ FILES :=                    \
     FunctionDefaults        \
     FunctionUnpacking       \
     FunctionTuple           \
-    FunctionDict
+    FunctionDict            \
+    Select1                 \
+    Select2                 \
+    Project1                \
+    Project2
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3
