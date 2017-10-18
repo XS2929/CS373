@@ -34,7 +34,11 @@ FILES :=                    \
     Select1                 \
     Select2                 \
     Project1                \
-    Project2
+    Project2                \
+    CrossJoin1              \
+    CrossJoin2              \
+    ThetaJoin1              \
+    ThetaJoin2
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3

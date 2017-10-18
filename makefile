@@ -127,6 +127,10 @@ sync:
     --include "Select2.py"                   \
     --include "Project1.py"                  \
     --include "Project2.py"                  \
+    --include "CrossJoin1.py"                \
+    --include "CrossJoin2.py"                \
+    --include "ThetaJoin1.py"                \
+    --include "ThetaJoin2.py"                \
     --exclude "*"                            \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete             \
