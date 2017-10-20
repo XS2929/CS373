@@ -15,26 +15,18 @@ from unittest import main, TestCase
 
 from ThetaJoin1 import theta_join
 
-def natural_join_yield (
+def natural_join_1 (
         r: Iterable[Dict[str, int]],
         s: Iterable[Dict[str, int]]) \
         -> Iterator[Dict[str, int]]  :
     def bp (u, v) :
-        return all(u[k] == v[k] for k in u if k in v)
-    for u in r :
-        for v in s :
-            if bp(u, v) :
-                yield dict(u, **v)
+        for k in u :
+            if (k in v) and (u[k] != v[k]) :
+                return False
+        return True
+    return theta_join(r, s, bp)
 
-def natural_join_generator (
-        r: Iterable[Dict[str, int]],
-        s: Iterable[Dict[str, int]]) \
-        -> Iterator[Dict[str, int]]  :
-    def bp (u, v) :
-        return all(u[k] == v[k] for k in u if k in v)
-    return (dict(u, **v) for u in r for v in s if bp(u, v))
-
-def natural_join_theta_join (
+def natural_join_2 (
         r: Iterable[Dict[str, int]],
         s: Iterable[Dict[str, int]]) \
         -> Iterator[Dict[str, int]]  :
@@ -42,12 +34,18 @@ def natural_join_theta_join (
         return all(u[k] == v[k] for k in u if k in v)
     return theta_join(r, s, bp)
 
+def natural_join_3 (
+        r: Iterable[Dict[str, int]],
+        s: Iterable[Dict[str, int]]) \
+        -> Iterator[Dict[str, int]]  :
+    return theta_join(r, s, lambda u, v : all(u[k] == v[k] for k in u if k in v))
+
 class MyUnitTests (TestCase) :
     def setUp (self) :
         self.a = [
-            natural_join_yield,
-            natural_join_generator,
-            natural_join_theta_join]
+            natural_join_1,
+            natural_join_2,
+            natural_join_3]
         self.r = []
         self.s = []
 
