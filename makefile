@@ -131,6 +131,8 @@ sync:
     --include "CrossJoin2.py"                \
     --include "ThetaJoin1.py"                \
     --include "ThetaJoin2.py"                \
+    --include "NaturalJoin1.py"              \
+    --include "NaturalJoin2.py"              \
     --exclude "*"                            \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete             \

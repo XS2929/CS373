@@ -38,7 +38,9 @@ FILES :=                    \
     CrossJoin1              \
     CrossJoin2              \
     ThetaJoin1              \
-    ThetaJoin2
+    ThetaJoin2              \
+    NaturalJoin1            \
+    NaturalJoin2
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3
