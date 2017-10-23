@@ -7,6 +7,7 @@ join
     natural
 """
 
+"""
 select(r, <unary predicate>)
 project(r, a...)
 cross_join(r, s)
@@ -15,6 +16,7 @@ theta_join(r, s, <binary predicate>)
     select
 natural_join(r, s)
     theta_join(r, s, <hand-build binary predicate>)
+"""
 
 def natural_join (r, s) :
     def match (u, v) :
@@ -37,8 +39,8 @@ def natural_join (r, s) :
             s,
             lambda u, v : all(u[x] == v[x] for x in u if x in v))
 
-all([1, True, 2.5]) => True
-all((1, True, 0.0)) => False
+all([1, True, 2.5]) # True
+all((1, True, 0.0)) # False
 
 def all (a) :
     for v in a :
