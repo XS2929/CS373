@@ -40,7 +40,8 @@ FILES :=                    \
     ThetaJoin1              \
     ThetaJoin2              \
     NaturalJoin1            \
-    NaturalJoin2
+    NaturalJoin2            \
+    With
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3
