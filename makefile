@@ -136,19 +136,22 @@ sync:
     --include "With.py"                      \
     --exclude "*"                            \
     ../../examples/python/ examples
-	@rsync -r -t -u -v --delete             \
-    --include "ShowDatabases.sql"           \
-    --include "ShowEngines.sql"             \
-    --exclude "*"                           \
+	@rsync -r -t -u -v --delete              \
+    --include "ShowDatabases.sql"            \
+    --include "ShowEngines.sql"              \
+    --include "Create.sql"                   \
+    --include "Select.sql"                   \
+    --include "Join.sql"                     \
+    --exclude "*"                            \
     ../../examples/sql/ examples
-	@rsync -r -t -u -v --delete             \
-    --include "Collatz.py"                  \
-    --include "RunCollatz.py"               \
-    --include "RunCollatz.in"               \
-    --include "RunCollatz.out"              \
-    --include "TestCollatz.py"              \
-    --include "TestCollatz.out"             \
-    --exclude "*"                           \
+	@rsync -r -t -u -v --delete              \
+    --include "Collatz.py"                   \
+    --include "RunCollatz.py"                \
+    --include "RunCollatz.in"                \
+    --include "RunCollatz.out"               \
+    --include "TestCollatz.py"               \
+    --include "TestCollatz.out"              \
+    --exclude "*"                            \
     ../../projects/python/collatz/ projects/collatz
 
 travis:
