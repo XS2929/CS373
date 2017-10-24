@@ -41,6 +41,7 @@ FILES :=                    \
     ThetaJoin2              \
     NaturalJoin1            \
     NaturalJoin2            \
+    SQLite                  \
     With
 
 ifeq ($(shell uname), Darwin)          # Apple

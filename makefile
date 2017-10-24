@@ -133,6 +133,7 @@ sync:
     --include "ThetaJoin2.py"                \
     --include "NaturalJoin1.py"              \
     --include "NaturalJoin2.py"              \
+    --include "SQLite.py"                    \
     --include "With.py"                      \
     --exclude "*"                            \
     ../../examples/python/ examples
