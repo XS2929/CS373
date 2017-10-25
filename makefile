@@ -143,6 +143,8 @@ sync:
     --include "Create.sql"                   \
     --include "Select.sql"                   \
     --include "Join.sql"                     \
+    --include "Joins.sql"                    \
+    --include "Subqueries.sql"               \
     --exclude "*"                            \
     ../../examples/sql/ examples
 	@rsync -r -t -u -v --delete              \
