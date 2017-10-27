@@ -149,6 +149,7 @@ sync:
 	@rsync -r -t -u -v --delete              \
     --include "Stack1.uml"                   \
     --include "Stack2.uml"                   \
+    --include "SAC.uml"                      \
     --exclude "*"                            \
     ../../examples/uml/ examples
 	@rsync -r -t -u -v --delete              \

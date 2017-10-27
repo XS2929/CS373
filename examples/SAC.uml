@@ -1,0 +1,25 @@
+@startuml
+Student *- Apply
+Apply   -* College
+
+class Student {
+    int sID
+    text sName
+    float GPA
+    int sizeHS
+    }
+
+class Apply {
+    int sID
+    text cName
+    text major
+    boolean decision
+    }
+
+class College {
+    text cName
+    char[2] state
+    int enrollment
+    }
+
+@enduml
