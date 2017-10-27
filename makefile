@@ -139,13 +139,26 @@ sync:
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete              \
     --include "ShowDatabases.sql"            \
+    --include "ShowDatabases.html"           \
     --include "ShowEngines.sql"              \
+    --include "ShowEngines.html"             \
     --include "Create.sql"                   \
+    --include "Create.html"                  \
     --include "Select.sql"                   \
+    --include "Select.html"                  \
     --include "Join.sql"                     \
+    --include "Join.html"                    \
     --include "Joins.sql"                    \
+    --include "Joins.html"                   \
     --exclude "*"                            \
     ../../examples/sql/ examples
+	@rsync -r -t -u -v --delete              \
+    --include "Stack1.uml"                   \
+    --include "Stack1.png"                   \
+    --include "Stack2.uml"                   \
+    --include "Stack2.png"                   \
+    --exclude "*"                            \
+    ../../examples/uml/ examples
 	@rsync -r -t -u -v --delete              \
     --include "Collatz.py"                   \
     --include "RunCollatz.py"                \
