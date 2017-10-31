@@ -1,6 +1,6 @@
 @startuml
-Student *- Apply
-Apply   -* College
+Student - Apply
+Apply   - College
 
 class Student {
     int sID

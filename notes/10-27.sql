@@ -29,3 +29,13 @@ select sID, sName, GPA
         (select sID
             from Apply
             where major = 'CS');
+
+select "*** #4 ***";
+select "and so is this";
+
+select sID, sName, GPA
+    from Student
+    where sID in
+        (select distinct sID
+            from Apply
+            where major = 'CS');

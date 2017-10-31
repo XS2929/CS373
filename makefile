@@ -135,6 +135,7 @@ sync:
     --include "NaturalJoin2.py"              \
     --include "SQLite.py"                    \
     --include "With.py"                      \
+    --include "RegExps.py"                   \
     --exclude "*"                            \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete              \
