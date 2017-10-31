@@ -77,16 +77,17 @@ select * from Apply;
 select * from College;
 
 -- -----------------------------------------------------------------------
-# relational algebra cross join
+-- relational algebra cross join
 
 select "*** #1 ***";
 
 select *
-    from Student cross join Apply
+    from Student
+    cross join Apply
     order by Student.sID;
 
 -- -----------------------------------------------------------------------
-# relational algebra cross join
+-- relational algebra theta join
 
 select "*** #2 ***";
 
@@ -95,7 +96,7 @@ select *
     inner join Apply using (sID);
 
 -- -----------------------------------------------------------------------
-# relational algebra cross join and select
+-- relational algebra theta join
 
 select "*** #3 ***";
 
@@ -106,7 +107,7 @@ select *
           (major    = 'CS')   and
           (decision = false);
 
-# relational algebra cross join and select
+-- relational algebra theta join and project
 
 select sName, GPA
     from Student
@@ -116,7 +117,7 @@ select sName, GPA
           (decision = false);
 
 -- -----------------------------------------------------------------------
-# relational algebra cross join and select
+-- relational algebra theta join
 
 select "*** #4 ***";
 
@@ -129,7 +130,7 @@ select *
           (decision   = true)  and
           (enrollment > 20000);
 
-# relational algebra cross join and select
+-- relational algebra theta join and project
 
 select sName, GPA
     from Student

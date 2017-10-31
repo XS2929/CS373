@@ -70,6 +70,7 @@ insert into College values ('Cornell',  'NY', 21000);
 insert into College values ('Irene',    'TX', 25000);
 insert into College values ('MIT',      'MA', 10000);
 insert into College values ('Stanford', 'CA', 15000);
+insert into College values ('UT',       'TX', 36000);
 
 -- -----------------------------------------------------------------------
 select * from Student;
@@ -77,7 +78,7 @@ select * from Apply;
 select * from College;
 
 -- -----------------------------------------------------------------------
-# relational algebra select
+-- relational algebra select
 
 select "*** #1 ***";
 select *
@@ -85,7 +86,7 @@ select *
     where (GPA > 3.7);
 
 -- -----------------------------------------------------------------------
-# relational algebra select
+-- relational algebra select
 
 select "*** #2 ***";
 select *
@@ -93,7 +94,7 @@ select *
     where (GPA > 3.7) and (sizeHS < 1000);
 
 -- -----------------------------------------------------------------------
-# relational algebra select
+-- relational algebra select
 
 select "*** #3 ***";
 select *
@@ -101,14 +102,14 @@ select *
     where (cName = 'Stanford') and (major = 'CS');
 
 -- -----------------------------------------------------------------------
-# relational algebra project
+-- relational algebra project
 
 select "*** #4 ***";
 select sID, decision
     from Apply;
 
 -- -----------------------------------------------------------------------
-# relational algebra select and project
+-- relational algebra select and project
 
 select "*** #5 ***";
 select sID, sName
@@ -116,7 +117,7 @@ select sID, sName
     where (GPA > 3.7);
 
 -- -----------------------------------------------------------------------
-# relational algebra project and sorting
+-- relational algebra project and sorting
 
 select "*** #6 ***";
 select major, decision

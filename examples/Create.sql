@@ -76,6 +76,7 @@ insert into College values ('Cornell',  'NY', 21000);
 insert into College values ('Irene',    'TX', 25000);
 insert into College values ('MIT',      'MA', 10000);
 insert into College values ('Stanford', 'CA', 15000);
+insert into College values ('UT',       'TX', 36000);
 
 -- -----------------------------------------------------------------------
 select * from Student;
