@@ -43,7 +43,8 @@ FILES :=                    \
     NaturalJoin2            \
     SQLite                  \
     With                    \
-    RegExps
+    RegExps                 \
+    Strings
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3

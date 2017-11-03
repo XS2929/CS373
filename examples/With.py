@@ -9,6 +9,8 @@
 # With.py
 # -------
 
+# https://docs.python.org/3/reference/compound_stmts.html#the-with-statement
+
 def test1 () :
     f = open("With.py")
     try :

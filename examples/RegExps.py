@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
 
+# pylint: disable = bad-whitespace
+# pylint: disable = invalid-name
+# pylint: disable = missing-docstring
+
 # ----------
 # RegExps.py
 # ----------
+
+# https://docs.python.org/3/library/re.html
 
 import re
 

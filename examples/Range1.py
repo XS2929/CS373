@@ -8,6 +8,8 @@
 # Range1.py
 # ---------
 
+# https://docs.python.org/3/library/functions.html#func-range
+
 def test () -> None :
     x = range(2, 2)
     p = iter(x)

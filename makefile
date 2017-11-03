@@ -136,6 +136,7 @@ sync:
     --include "SQLite.py"                    \
     --include "With.py"                      \
     --include "RegExps.py"                   \
+    --include "Strings.py"                   \
     --exclude "*"                            \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete              \

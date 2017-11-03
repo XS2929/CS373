@@ -9,6 +9,8 @@
 # SQLite.py
 # ---------
 
+# https://docs.python.org/3.6/library/sqlite3.html
+
 import sqlite3
 
 def test1 () :
