@@ -233,12 +233,12 @@ select cName, major, avg(GPA), max(GPA), min(GPA), max(GPA) - min(GPA)
     having
         max(GPA) - min(GPA)
         =
-		(select max(x)
-			from
-				(select max(GPA) - min(GPA) as x
-					from Student
-					inner join Apply using (sID)
-					group by cName, major) as T);
+        (select max(x)
+            from
+                (select max(GPA) - min(GPA) as x
+                    from Student
+                    inner join Apply using (sID)
+                    group by cName, major) as T);
 
 -- -----------------------------------------------------------------------
 select "*** number of colleges applied to by each student ***";
