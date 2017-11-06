@@ -97,7 +97,7 @@ select distinct sID, sName, GPA
     where major = 'CS';
 
 select "*** #1c ***";
-select "this is also right, using subquery, with in";
+select "this is also right, subquery, with in";
 
 select sID, sName, GPA
     from Student
@@ -107,7 +107,7 @@ select sID, sName, GPA
             where major = 'CS');
 
 select "*** #1d ***";
-select "this is also right, using subquery, with in and distinct";
+select "this is also right, subquery, with in and distinct";
 
 select sID, sName, GPA
     from Student
@@ -138,7 +138,7 @@ select distinct GPA
     order by GPA desc;
 
 select "*** #2c ***";
-select "this is right, using subquery, with in";
+select "this is right, subquery, with in";
 
 select GPA
     from Student
@@ -149,7 +149,7 @@ select GPA
     order by GPA desc;
 
 select "*** #2d ***";
-select "this is right, using subquery, with in and distinct";
+select "this is right, subquery, with in and distinct";
 
 select GPA
     from Student
@@ -173,7 +173,7 @@ select sID
         sID in (select sID from Apply where major != 'EE');
 
 select "*** #3b ***";
-select "this is right, using subquery, with in and not in";
+select "this is right, subquery, with in and not in";
 
 select sID
     from Student
@@ -183,7 +183,7 @@ select sID
         sID not in (select sID from Apply where major = 'EE');
 
 select "*** #3c ***";
-select "this is also right, using subquery, with in";
+select "this is also right, subquery, with in";
 
 select distinct sID
     from Apply
@@ -205,7 +205,7 @@ select distinct R.cName, R.state
           (R.state  = S.state);
 
 select "*** #4b ***";
-select "using subquery, with exists";
+select "subquery, with exists";
 
 select cName, state
     from College as R
@@ -216,7 +216,7 @@ select cName, state
                   (R.state =  S.state));
 
 select "*** #4c ***";
-select "using subquery, with group by and having";
+select "subquery, with group by and having";
 
 select cName, state
     from College
@@ -230,7 +230,7 @@ select cName, state
 select "*** colleges with highest enrollment ***";
 
 select "*** #5a ***";
-select "using subquery, with not exists";
+select "subquery, with not exists";
 
 select cName, enrollment
     from College as R
@@ -240,7 +240,7 @@ select cName, enrollment
             where R.enrollment < S.enrollment);
 
 select "*** #5b ***";
-select "using subquery, with all";
+select "subquery, with all";
 
 select cName, enrollment
     from College
@@ -275,7 +275,7 @@ select sID, sName, GPA
         (GPA is not null);
 
 select "*** #6c ***";
-select "this is also right, using subquery, with all";
+select "this is also right, subquery, with all";
 
 select sID, sName, GPA
     from Student

@@ -77,9 +77,9 @@ select * from Apply;
 select * from College;
 
 -- ------------------------------------------------------------------------
-select "*** #1 ***";
 select "*** set union: names of students OR colleges ***";
 
+select "*** #1a ***";
 select "this is not good, the attribute name is misleading";
 
 select sName from Student
@@ -87,6 +87,7 @@ union
 select cName from College
 order by sName;
 
+select "*** #1b ***";
 select "this is better";
 
 select sName as csName from Student
@@ -95,13 +96,12 @@ select cName as csName from College
 order by csName;
 
 -- ------------------------------------------------------------------------
-select "*** #2 ***";
 select "*** set intersection: names of students AND colleges ***";
 select "MySQL does not support intersect";
 select "Every derived table must have its own alias";
 
-select "using inner join";
-
+select "*** #2a ***";
+select "inner join, with on";
 select *
     from
         (select sName from Student) as R
@@ -109,6 +109,8 @@ select *
         (select cName from College) as S
         on (R.sName = S.cName);
 
+select "*** #2b ***";
+select "inner join, with using";
 select *
     from
         (select sName as csName from Student) as R
@@ -116,7 +118,8 @@ select *
         (select cName as csName from College) as S
         using (csName);
 
-select "using a subquery, with in";
+select "*** #2c ***";
+select "subquery, with in";
 
 select sName as csName
     from Student
@@ -124,7 +127,8 @@ select sName as csName
         (select cName
             from College);
 
-select "using a subquery, with exists";
+select "*** #2d ***";
+select "subquery, with exists";
 
 select sName as csName
     from Student
@@ -134,11 +138,11 @@ select sName as csName
             where sName = cName);
 
 -- ------------------------------------------------------------------------
-select "*** #3 ***";
 select "*** set difference: ID of students who did not apply anywhere ***";
 select "MySQL does not support except (minus)";
 
-select "using a subquery, with not in";
+select "*** #3a ***";
+select "subquery, with not in";
 
 select sID
     from Student
@@ -146,7 +150,8 @@ select sID
         (select sID
             from Apply);
 
-select "using a subquery, with not exists";
+select "*** #3b ***";
+select "subquery, with not exists";
 
 select sID
     from Student
