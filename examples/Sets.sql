@@ -146,7 +146,6 @@ select sID
         (select sID
             from Apply);
 
-select "*** #3 ***";
 select "using a subquery, with not exists";
 
 select sID
