@@ -95,39 +95,38 @@ select *
     order by sID;
 
 -- -----------------------------------------------------------------------
+select "*** #2 ***";
 select "*** stats on GPA of students ***";
 
-select "*** #2a ***";
 select count(*) from Student;
 select       *  from Student;
 
-select "*** #2b ***";
 select avg(GPA), max(GPA), min(GPA), sum(GPA)
     from Student;
 
 -- -----------------------------------------------------------------------
+select "*** #3 ***";
 select "*** stats on GPA of students applying to CS ***";
 
-select "*** #3a ***";
 select count(*)
     from Student
     where sID in (select sID from Apply where major = 'CS');
+
 select *
     from Student
     where sID in (select sID from Apply where major = 'CS')
     order by GPA desc;
 
-select "*** #3b ***";
 select avg(GPA), max(GPA), min(GPA), sum(GPA)
     from Student
     where sID in (select sID from Apply where major = 'CS')
     order by GPA desc;
 
 -- -----------------------------------------------------------------------
+select "*** #4 ***";
 select "*** amount by which the average GPA of students applying to CS ***";
 select "*** exceeds the average GPA of students not applying to CS ***";
 
-select "*** #4a ***";
 select *
     from
         (select avg(GPA) as gpa
@@ -143,7 +142,6 @@ select *
                     from Apply
                         where major = 'CS')) as S;
 
-select "*** #4b ***";
 select R.gpa - S.gpa
     from
         (select avg(GPA) as gpa
@@ -160,64 +158,59 @@ select R.gpa - S.gpa
                         where major = 'CS')) as S;
 
 -- -----------------------------------------------------------------------
+select "*** #5 ***";
 select "*** college name and number of APPLICATIONS to that college ***";
 
-select "*** #5a ***";
 select count(*) from Apply;
 select       *  from Apply order by cName;
 
-select "*** #5b ***";
 select *, count(*)
     from Apply
     group by cName;
 
-select "*** #5c ***";
 select cName, count(*)
     from Apply
     group by cName;
 
 -- -----------------------------------------------------------------------
+select "*** #6 ***";
 select "*** college name and number of APPLICANTS to that college ***";
 
-select "*** #6a ***";
 select count(*) from Apply;
 select       *  from Apply order by cName;
 
-select "*** #6b ***";
 select cName, count(sID), count(distinct sID)
     from Apply
     group by cName;
 
 -- -----------------------------------------------------------------------
+select "*** #7 ***";
 select "*** stats on college enrollment by state ***";
 
-select "*** #7a ***";
 select count(*) from College;
 select       *  from College order by state;
 
-select "*** #7b ***";
 select state, avg(enrollment), max(enrollment), min(enrollment), sum(enrollment)
     from College
     group by state;
 
 -- -----------------------------------------------------------------------
+select "*** #8 ***";
 select "*** stats on GPA of applicants to each college and major ***";
 
-select "*** #8a ***";
 select count(*) from Student inner join Apply using (sID);
 select       *  from Student inner join Apply using (sID) order by cName, major;
 
-select "*** #8b ***";
 select cName, major, avg(GPA), max(GPA), min(GPA), max(GPA) - min(GPA)
     from Student
     inner join Apply using (sID)
     group by cName, major;
 
 -- -----------------------------------------------------------------------
+select "*** #9 ***";
 select "*** max spread between min and max GPA of applicants ***";
 select "*** to each college and major ***";
 
-select "*** #9a ***";
 select max(x)
     from
         (select max(GPA) - min(GPA) as x
@@ -225,7 +218,6 @@ select max(x)
             inner join Apply using (sID)
             group by cName, major) as T;
 
-select "*** #9b ***";
 select cName, major, avg(GPA), max(GPA), min(GPA), max(GPA) - min(GPA)
     from Student
     inner join Apply using (sID)
@@ -241,13 +233,12 @@ select cName, major, avg(GPA), max(GPA), min(GPA), max(GPA) - min(GPA)
                     group by cName, major) as T);
 
 -- -----------------------------------------------------------------------
+select "*** #10 ***";
 select "*** number of colleges applied to by each student ***";
 
-select "*** #10a ***";
 select count(*) from Student inner join Apply using (sID);
 select       *  from Student inner join Apply using (sID);
 
-select "*** #10b ***";
 select "does not include student who did not apply anywhere";
 
 select sID, sName, count(distinct cName) as count_cName
@@ -256,7 +247,6 @@ select sID, sName, count(distinct cName) as count_cName
     group by sID
     order by count(cName) desc;
 
-select "*** #10c ***";
 select "does include student who did not apply anywhere";
 
 select sID, sName, count(distinct cName) as count_cName
@@ -271,47 +261,43 @@ select sID, sName, 0 as count_cName
 order by count_cName desc;
 
 -- -----------------------------------------------------------------------
+select "*** #11 ***";
 select "*** colleges with fewer than 5 APPLICATIONS ***";
 
-select "*** #11a ***";
 select cName, count(*)
     from Apply
     group by cName;
 
-select "*** #11b ***";
 select cName, count(*)
     from Apply
     group by cName
     having count(*) < 5;
 
 -- -----------------------------------------------------------------------
+select "*** #12 ***";
 select "*** colleges with fewer than 5 APPLICANTS ***";
 
-select "*** #12a ***";
 select cName, count(distinct sID)
     from Apply
     group by cName;
 
-select "*** #12b ***";
 select cName, count(distinct sID)
     from Apply
     group by cName
     having count(distinct sID) < 5;
 
 -- -----------------------------------------------------------------------
+select "*** #13 ***";
 select "*** majors whose applicant's max GPA is less than the average ***";
 
-select "*** #13a ***";
 select avg(GPA)
     from Student;
 
-select "*** #13b ***";
 select major, max(GPA)
     from Student
     inner join Apply using (sID)
     group by major;
 
-select "*** #13c ***";
 select major
     from Student
     inner join Apply using (sID)

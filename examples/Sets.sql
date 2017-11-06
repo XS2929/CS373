@@ -98,6 +98,7 @@ order by csName;
 -- ------------------------------------------------------------------------
 select "*** set intersection: names of students AND colleges ***";
 select "MySQL does not support intersect";
+select "Every derived table must have its own alias";
 
 select "using inner join";
 
