@@ -1,6 +1,6 @@
-// -----------
-// Fri, 27 Oct
-// -----------
+-- -----------
+-- Fri, 27 Oct
+-- -----------
 
 select "*** ID, name, and GPA of students who applied in CS ***";
 

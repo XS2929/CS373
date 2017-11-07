@@ -1,3 +1,7 @@
+-- -----------
+-- Mon,  6 Nov
+-- -----------
+
 select sName from Student
 where sName in
 (select cName from College)
