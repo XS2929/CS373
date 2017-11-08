@@ -94,6 +94,7 @@ select *
 
 -- ------------------------------------------------------------------------
 -- have those students apply to Carnegie Mellon in CS
+-- why is this dangerous?
 
 select "*** #2a ***";
 select count(*) from Apply;
@@ -124,8 +125,8 @@ select distinct sID
     where (major = 'EE') and (decision = false);
 
 -- ------------------------------------------------------------------------
--- have those students apply to Carnegie Mellon in EE
--- and be accepted
+-- have those students apply to Carnegie Mellon in EE and be accepted
+-- why is this dangerous?
 
 select "*** #4a ***";
 select count(*) from Apply;

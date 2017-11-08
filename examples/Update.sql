@@ -77,8 +77,7 @@ select * from Apply;
 select * from College;
 
 -- ------------------------------------------------------------------------
--- applications of students who applied to Cornell
--- with a GPA < 3.6
+-- applications of students who applied to Cornell with a GPA < 3.6
 
 select "*** #1 ***";
 select count(*)
@@ -102,8 +101,8 @@ select *
                 where GPA < 3.6);
 
 -- ------------------------------------------------------------------------
--- change those applications from Cornell to UT
--- and have them accepted
+-- change those applications from Cornell to UT and have them accepted
+-- why is this dangerous?
 
 select "*** #2a ***";
 update Apply
