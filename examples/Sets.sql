@@ -77,31 +77,29 @@ select * from Apply;
 select * from College;
 
 -- ------------------------------------------------------------------------
-select "*** set union: names of students OR colleges ***";
+-- set union: names of students OR colleges
 
+-- this is not good, the attribute name is misleading
 select "*** #1a ***";
-select "this is not good, the attribute name is misleading";
-
 select sName from Student
 union
 select cName from College
 order by sName;
 
+-- this is better
 select "*** #1b ***";
-select "this is better";
-
 select sName as csName from Student
 union
-select cName as csName from College
+select cName from College
 order by csName;
 
 -- ------------------------------------------------------------------------
-select "*** set intersection: names of students AND colleges ***";
-select "MySQL does not support intersect";
-select "Every derived table must have its own alias";
+-- set intersection: names of students AND colleges
+-- MySQL does not support intersect
+-- Every derived table must have its own alias
 
+-- inner join, with on
 select "*** #2a ***";
-select "inner join, with on";
 select *
     from
         (select sName from Student) as R
@@ -109,8 +107,8 @@ select *
         (select cName from College) as S
         on (R.sName = S.cName);
 
+-- inner join, with using
 select "*** #2b ***";
-select "inner join, with using";
 select *
     from
         (select sName as csName from Student) as R
@@ -118,18 +116,16 @@ select *
         (select cName as csName from College) as S
         using (csName);
 
+-- subquery, with in
 select "*** #2c ***";
-select "subquery, with in";
-
 select sName as csName
     from Student
     where sName in
         (select cName
             from College);
 
+-- subquery, with exists
 select "*** #2d ***";
-select "subquery, with exists";
-
 select sName as csName
     from Student
     where exists
@@ -138,21 +134,19 @@ select sName as csName
             where sName = cName);
 
 -- ------------------------------------------------------------------------
-select "*** set difference: ID of students who did not apply anywhere ***";
-select "MySQL does not support except (minus)";
+-- set difference: ID of students who did not apply anywhere
+-- MySQL does not support except (minus)
 
+-- subquery, with not in
 select "*** #3a ***";
-select "subquery, with not in";
-
 select sID
     from Student
     where sID not in
         (select sID
             from Apply);
 
+-- subquery, with not exists
 select "*** #3b ***";
-select "subquery, with not exists";
-
 select sID
     from Student
     where not exists
