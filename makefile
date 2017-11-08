@@ -149,6 +149,9 @@ sync:
     --include "Subqueries.sql"               \
     --include "Sets.sql"                     \
     --include "Aggregation.sql"              \
+    --include "Insert.sql"                   \
+    --include "Update.sql"                   \
+    --include "Delete.sql"                   \
     --exclude "*"                            \
     ../../examples/sql/ examples
 	@rsync -r -t -u -v --delete              \
