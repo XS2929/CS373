@@ -116,7 +116,7 @@ update Apply
                 from Student
                 where GPA < 3.6);
 
-select "*** #2c ***";
+select "*** #2b ***";
 select count(*)
     from Student inner join Apply
     using (sID)
@@ -127,16 +127,7 @@ select *
     using (sID)
     where (cName = 'UT') and (GPA < 3.6);
 
-select "*** #2d ***";
-select *
-    from Apply
-    where
-        (cName = 'UT')
-        and
-        sID in
-            (select sID
-                from Student
-                where GPA < 3.6);
+select "*** #2c ***";
 select *
     from Apply
     where
