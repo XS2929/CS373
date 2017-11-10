@@ -162,6 +162,11 @@ sync:
     ../../examples/uml/ examples
 	@rsync -r -t -u -v --delete              \
     --include "StrategyPattern1.java"        \
+    --include "StrategyPattern2.java"        \
+    --include "StrategyPattern3.java"        \
+    --include "StrategyPattern4.java"        \
+    --include "StrategyPattern5.java"        \
+    --include "StrategyPattern6.java"        \
     --exclude "*"                            \
     ../../examples/java/ examples
 	@rsync -r -t -u -v --delete              \
