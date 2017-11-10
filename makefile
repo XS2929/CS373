@@ -161,6 +161,10 @@ sync:
     --exclude "*"                            \
     ../../examples/uml/ examples
 	@rsync -r -t -u -v --delete              \
+    --include "StrategyPattern1.java"        \
+    --exclude "*"                            \
+    ../../examples/java/ examples
+	@rsync -r -t -u -v --delete              \
     --include "Collatz.py"                   \
     --include "RunCollatz.py"                \
     --include "RunCollatz.in"                \
