@@ -87,6 +87,7 @@ select sID, count(distinct major)
 
 -- ------------------------------------------------------------------------
 -- delete those students from Student
+-- why is this dangerous?
 
 select "*** #2a ***";
 select count(*) from Student;
@@ -123,7 +124,11 @@ delete
 
 -- create temporary table first
 
-select "*** #3a ***";
+select "*** #3b ***";
+select count(*) from Apply;
+select *        from Apply;
+
+select "*** #3b ***";
 create temporary table T as
     select sID
         from Apply
@@ -143,10 +148,6 @@ select *
     where sID in
         (select *
             from T);
-
-select "*** #3b ***";
-select count(*) from Apply;
-select *        from Apply;
 
 select "*** #3c ***";
 delete
@@ -179,6 +180,7 @@ select cName
 
 -- ------------------------------------------------------------------------
 -- delete those colleges from College
+-- why is this dangerous?
 
 select "*** #5a ***";
 select count(*) from College;

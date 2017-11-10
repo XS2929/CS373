@@ -186,7 +186,7 @@ select distinct sID
 
 -- inner join
 select "*** #4a ***";
-select distinct R.cName, R.state
+select R.cName, R.state
     from College as R
     inner join College as S
     where (R.cName != S.cName) and

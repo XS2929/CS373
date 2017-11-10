@@ -105,6 +105,17 @@ select *
 -- why is this dangerous?
 
 select "*** #2a ***";
+select count(*)
+    from Apply
+    where
+        (cName = 'UT')
+        and
+        sID in
+            (select sID
+                from Student
+                where GPA < 3.6);
+
+select "*** #2b ***";
 update Apply
     set cName = 'UT', decision = true
     where
@@ -115,18 +126,17 @@ update Apply
                 from Student
                 where GPA < 3.6);
 
-select "*** #2b ***";
-select count(*)
-    from Student inner join Apply
-    using (sID)
-    where (cName = 'UT') and (GPA < 3.6);
-
-select *
-    from Student inner join Apply
-    using (sID)
-    where (cName = 'UT') and (GPA < 3.6);
-
 select "*** #2c ***";
+select count(*)
+    from Apply
+    where
+        (cName = 'UT')
+        and
+        sID in
+            (select sID
+                from Student
+                where GPA < 3.6);
+
 select *
     from Apply
     where
@@ -174,6 +184,13 @@ select *
 -- change those applications from CS to CSE
 
 select "*** #4a ***";
+select count(*)
+    from Student
+    inner join Apply using (sID)
+    where major = 'CSE'
+    order by GPA desc;
+
+select "*** #4b ***";
 create temporary table T as
     (select sID
         from Student
@@ -185,7 +202,7 @@ create temporary table T as
                         from Apply
                         where major = 'CS')));
 
-select "*** #4b ***";
+select "*** #4c ***";
 update Apply
     set major = 'CSE'
     where
@@ -195,7 +212,7 @@ update Apply
             (select *
                 from T);
 
-select "*** #4c ***";
+select "*** #4d ***";
 select count(*)
     from Student
     inner join Apply using (sID)
@@ -209,8 +226,7 @@ select *
     order by GPA desc;
 
 -- ------------------------------------------------------------------------
--- change every student to have the highest GPA
--- and smallest school size
+-- change every student to have the highest GPA and smallest school size
 
 select "*** #5a ***";
 select count(*) from Student;
