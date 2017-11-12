@@ -158,6 +158,12 @@ sync:
     --include "Stack1.uml"                   \
     --include "Stack2.uml"                   \
     --include "SAC.uml"                      \
+    --include "StrategyPattern1.uml"         \
+    --include "StrategyPattern2.uml"         \
+    --include "StrategyPattern3.uml"         \
+    --include "StrategyPattern4.uml"         \
+    --include "StrategyPattern5.uml"         \
+    --include "StrategyPattern6.uml"         \
     --exclude "*"                            \
     ../../examples/uml/ examples
 	@rsync -r -t -u -v --delete              \

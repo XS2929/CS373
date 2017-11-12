@@ -1,0 +1,57 @@
+@startuml
+Customer *- "*" Rental
+Rental o- Movie
+Movie *- Price
+Price ^-- ChildrensPrice
+Price ^-- NewReleasePrice
+Price ^-- RegularPrice
+
+class Customer {
+    - String _name
+    - Vector<Rental> _rentals
+    + double getCharge (int daysRented)
+    + double getFrequentRenterPoints (int daysRented)
+    + getTotalCharge ()
+    + getTotalFrequentRenterPoints ()
+    + String statement ()
+    }
+
+class Rental {
+    - int _daysRented
+    - Movie _movie
+    + double getCharge ()
+    + int getDaysRented ()
+    + double getFrequentRenterPoints ()
+    + Movie getMovie ()
+    }
+
+class Movie {
+    - int _priceCode
+    - String _title
+    + getPriceCode ()
+    + getTitle ()
+    }
+
+abstract class Price {
+    + getCharge (int daysRented)
+    + getFrequentRenterPoints (int daysRented)
+    + getPriceCode ()
+    }
+
+class ChildrensPrice {
+    + getCharge (int daysRented)
+    + getPriceCode ()
+    }
+
+class NewReleasePrice {
+    + getCharge (int daysRented)
+    + getFrequentRenterPoints (int daysRented)
+    + getPriceCode ()
+    }
+
+class RegularPrice {
+    + getCharge (int daysRented)
+    + getPriceCode ()
+    }
+
+@enduml
