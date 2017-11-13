@@ -1,10 +1,10 @@
 @startuml
 Customer *- "*" Rental
-Rental o- Movie
-Movie *- Price
-Price ^-- ChildrensPrice
-Price ^-- NewReleasePrice
-Price ^-- RegularPrice
+Rental   o- "1" Movie
+Movie    *- "1" Price
+Price    ^-- ChildrensPrice
+Price    ^-- NewReleasePrice
+Price    ^-- RegularPrice
 
 class Customer {
     - String _name
