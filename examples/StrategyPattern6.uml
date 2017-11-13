@@ -24,7 +24,7 @@ class Rental {
     }
 
 class Movie {
-    - int _priceCode
+    - Price _price
     - String _title
     + double getCharge (int daysRented)
     + int getFrequentRenterPoints (int daysRented)
