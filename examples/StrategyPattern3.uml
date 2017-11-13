@@ -13,15 +13,15 @@ class Rental {
     - Movie _movie
     + double getCharge ()
     + int getDaysRented ()
-    + double getFrequentRenterPoints ()
+    + int getFrequentRenterPoints ()
     + Movie getMovie ()
     }
 
 class Movie {
     - int _priceCode
     - String _title
-    + getPriceCode ()
-    + getTitle ()
+    + int getPriceCode ()
+    + String getTitle ()
     }
 
 @enduml

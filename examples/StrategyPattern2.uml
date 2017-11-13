@@ -19,8 +19,8 @@ class Rental {
 class Movie {
     - int _priceCode
     - String _title
-    + getPriceCode ()
-    + getTitle ()
+    + int getPriceCode ()
+    + String getTitle ()
     }
 
 @enduml
