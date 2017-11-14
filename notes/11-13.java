@@ -23,8 +23,8 @@ class T {
 /*
 consequences of an abstract method in A
     A becomes abstract
-    B must either define f() or become abstract
-    A is prohibited from defining f()
+    B must either define f or become abstract
+    A is prohibited from defining f
 */
 
 final class A {
@@ -46,7 +46,7 @@ class T {
         x.f(2);
 
 /*
-where does Java behave statically?
+circumstances where methods statically bound, not dynamically bound
     static method
     final method
     final class
@@ -73,25 +73,3 @@ class T {
 
         B z = new B();               // not ok
         s.o.p(B.only() == B.only()); // true
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
