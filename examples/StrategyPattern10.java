@@ -1,6 +1,6 @@
-// -----------
-// Store9.java
-// -----------
+// ----------------------
+// StrategyPattern10.java
+// ----------------------
 
 /*
 Change Price to an interface
@@ -177,7 +177,7 @@ class Customer {
 
 final class StrategyPattern10 {
     public static void main (String[] args) {
-        System.out.println("StrategyPattern9.java");
+        System.out.println("StrategyPattern10.java");
 
         Customer x = new Customer("Penelope");
         assert x.statement().equals(

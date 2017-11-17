@@ -1,6 +1,6 @@
-// -----------
-// Store9.java
-// -----------
+// ---------------------
+// StrategyPattern9.java
+// ---------------------
 
 /*
 Change Price to an interface
