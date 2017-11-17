@@ -44,7 +44,9 @@ FILES :=                    \
     SQLite                  \
     With                    \
     RegExps                 \
-    Strings
+    Strings                 \
+    Reflection              \
+    StrategyPattern10
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3

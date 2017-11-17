@@ -87,111 +87,113 @@ status:
 	git status
 
 sync:
-	@rsync -r -t -u -v --delete              \
-    --include "Docker.txt"                   \
-    --include "Dockerfile"                   \
-    --include "Hello.py"                     \
-    --include "Assertions.py"                \
-    --include "UnitTests1.py"                \
-    --include "UnitTests2.py"                \
-    --include "UnitTests3.py"                \
-    --include "Coverage1.py"                 \
-    --include "Coverage2.py"                 \
-    --include "Coverage3.py"                 \
-    --include "IsPrime1.py"                  \
-    --include "IsPrime2.py"                  \
-    --include "Exceptions.py"                \
-    --include "Types.py"                     \
-    --include "Operators.py"                 \
-    --include "Variables.py"                 \
-    --include "Factorial1.py"                \
-    --include "Factorial2.py"                \
-    --include "Reduce1.py"                   \
-    --include "Reduce2.py"                   \
-    --include "Iteration.py"                 \
-    --include "Comprehensions.py"            \
-    --include "Yield.py"                     \
-    --include "Map1.py"                      \
-    --include "Map2.py"                      \
-    --include "Iterables.py"                 \
-    --include "RangeIterator1.py"            \
-    --include "RangeIterator2.py"            \
-    --include "Range1.py"                    \
-    --include "Range2.py"                    \
-    --include "FunctionKeywords.py"          \
-    --include "FunctionDefaults.py"          \
-    --include "FunctionUnpacking.py"         \
-    --include "FunctionTuple.py"             \
-    --include "FunctionDict.py"              \
-    --include "Select1.py"                   \
-    --include "Select2.py"                   \
-    --include "Project1.py"                  \
-    --include "Project2.py"                  \
-    --include "CrossJoin1.py"                \
-    --include "CrossJoin2.py"                \
-    --include "ThetaJoin1.py"                \
-    --include "ThetaJoin2.py"                \
-    --include "NaturalJoin1.py"              \
-    --include "NaturalJoin2.py"              \
-    --include "SQLite.py"                    \
-    --include "With.py"                      \
-    --include "RegExps.py"                   \
-    --include "Strings.py"                   \
-    --include "Reflection.py"                \
-    --exclude "*"                            \
+	@rsync -r -t -u -v --delete            \
+    --include "Docker.txt"                 \
+    --include "Dockerfile"                 \
+    --include "Hello.py"                   \
+    --include "Assertions.py"              \
+    --include "UnitTests1.py"              \
+    --include "UnitTests2.py"              \
+    --include "UnitTests3.py"              \
+    --include "Coverage1.py"               \
+    --include "Coverage2.py"               \
+    --include "Coverage3.py"               \
+    --include "IsPrime1.py"                \
+    --include "IsPrime2.py"                \
+    --include "Exceptions.py"              \
+    --include "Types.py"                   \
+    --include "Operators.py"               \
+    --include "Variables.py"               \
+    --include "Factorial1.py"              \
+    --include "Factorial2.py"              \
+    --include "Reduce1.py"                 \
+    --include "Reduce2.py"                 \
+    --include "Iteration.py"               \
+    --include "Comprehensions.py"          \
+    --include "Yield.py"                   \
+    --include "Map1.py"                    \
+    --include "Map2.py"                    \
+    --include "Iterables.py"               \
+    --include "RangeIterator1.py"          \
+    --include "RangeIterator2.py"          \
+    --include "Range1.py"                  \
+    --include "Range2.py"                  \
+    --include "FunctionKeywords.py"        \
+    --include "FunctionDefaults.py"        \
+    --include "FunctionUnpacking.py"       \
+    --include "FunctionTuple.py"           \
+    --include "FunctionDict.py"            \
+    --include "Select1.py"                 \
+    --include "Select2.py"                 \
+    --include "Project1.py"                \
+    --include "Project2.py"                \
+    --include "CrossJoin1.py"              \
+    --include "CrossJoin2.py"              \
+    --include "ThetaJoin1.py"              \
+    --include "ThetaJoin2.py"              \
+    --include "NaturalJoin1.py"            \
+    --include "NaturalJoin2.py"            \
+    --include "SQLite.py"                  \
+    --include "With.py"                    \
+    --include "RegExps.py"                 \
+    --include "Strings.py"                 \
+    --include "Reflection.py"              \
+    --include "StrategyPattern10.py"       \
+    --exclude "*"                          \
     ../../examples/python/ examples
-	@rsync -r -t -u -v --delete              \
-    --include "ShowDatabases.sql"            \
-    --include "ShowEngines.sql"              \
-    --include "Create.sql"                   \
-    --include "Select.sql"                   \
-    --include "Join.sql"                     \
-    --include "Joins.sql"                    \
-    --include "Subqueries.sql"               \
-    --include "Sets.sql"                     \
-    --include "Aggregation.sql"              \
-    --include "Insert.sql"                   \
-    --include "Update.sql"                   \
-    --include "Delete.sql"                   \
-    --exclude "*"                            \
+	@rsync -r -t -u -v --delete            \
+    --include "ShowDatabases.sql"          \
+    --include "ShowEngines.sql"            \
+    --include "Create.sql"                 \
+    --include "Select.sql"                 \
+    --include "Join.sql"                   \
+    --include "Joins.sql"                  \
+    --include "Subqueries.sql"             \
+    --include "Sets.sql"                   \
+    --include "Aggregation.sql"            \
+    --include "Insert.sql"                 \
+    --include "Update.sql"                 \
+    --include "Delete.sql"                 \
+    --exclude "*"                          \
     ../../examples/sql/ examples
-	@rsync -r -t -u -v --delete              \
-    --include "Stack1.uml"                   \
-    --include "Stack2.uml"                   \
-    --include "SAC.uml"                      \
-    --include "StrategyPattern1.uml"         \
-    --include "StrategyPattern2.uml"         \
-    --include "StrategyPattern3.uml"         \
-    --include "StrategyPattern4.uml"         \
-    --include "StrategyPattern5.uml"         \
-    --include "StrategyPattern6.uml"         \
-    --exclude "*"                            \
+	@rsync -r -t -u -v --delete            \
+    --include "Stack1.uml"                 \
+    --include "Stack2.uml"                 \
+    --include "SAC.uml"                    \
+    --include "StrategyPattern1.uml"       \
+    --include "StrategyPattern2.uml"       \
+    --include "StrategyPattern3.uml"       \
+    --include "StrategyPattern4.uml"       \
+    --include "StrategyPattern5.uml"       \
+    --include "StrategyPattern6.uml"       \
+    --exclude "*"                          \
     ../../examples/uml/ examples
-	@rsync -r -t -u -v --delete              \
-    --include "StrategyPattern1.java"        \
-    --include "StrategyPattern2.java"        \
-    --include "StrategyPattern3.java"        \
-    --include "StrategyPattern4.java"        \
-    --include "StrategyPattern5.java"        \
-    --include "StrategyPattern6.java"        \
-    --include "MethodOverriding1.java"       \
-    --include "DynamicBinding.java"          \
-    --include "SingletonPattern1.java"       \
-    --include "SingletonPattern2.java"       \
-    --include "StrategyPattern7.java"        \
-    --include "Reflection.java"              \
-    --include "StrategyPattern8.java"        \
-    --include "StrategyPattern9.java"        \
-    --exclude "*"                            \
+	@rsync -r -t -u -v --delete            \
+    --include "StrategyPattern1.java"      \
+    --include "StrategyPattern2.java"      \
+    --include "StrategyPattern3.java"      \
+    --include "StrategyPattern4.java"      \
+    --include "StrategyPattern5.java"      \
+    --include "StrategyPattern6.java"      \
+    --include "MethodOverriding1.java"     \
+    --include "DynamicBinding.java"        \
+    --include "SingletonPattern1.java"     \
+    --include "SingletonPattern2.java"     \
+    --include "StrategyPattern7.java"      \
+    --include "Reflection.java"            \
+    --include "StrategyPattern8.java"      \
+    --include "StrategyPattern9.java"      \
+    --include "StrategyPattern10.java"     \
+    --exclude "*"                          \
     ../../examples/java/ examples
-	@rsync -r -t -u -v --delete              \
-    --include "Collatz.py"                   \
-    --include "RunCollatz.py"                \
-    --include "RunCollatz.in"                \
-    --include "RunCollatz.out"               \
-    --include "TestCollatz.py"               \
-    --include "TestCollatz.out"              \
-    --exclude "*"                            \
+	@rsync -r -t -u -v --delete            \
+    --include "Collatz.py"                 \
+    --include "RunCollatz.py"              \
+    --include "RunCollatz.in"              \
+    --include "RunCollatz.out"             \
+    --include "TestCollatz.py"             \
+    --include "TestCollatz.out"            \
+    --exclude "*"                          \
     ../../projects/python/collatz/ projects/collatz
 
 travis:
