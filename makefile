@@ -178,7 +178,10 @@ sync:
     --include "DynamicBinding.java"          \
     --include "SingletonPattern1.java"       \
     --include "SingletonPattern2.java"       \
+    --include "StrategyPattern7.java"        \
     --include "Reflection.java"              \
+    --include "StrategyPattern8.java"        \
+    --include "StrategyPattern9.java"        \
     --exclude "*"                            \
     ../../examples/java/ examples
 	@rsync -r -t -u -v --delete              \
