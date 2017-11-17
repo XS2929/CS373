@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 
-#pylint: disable = bad-builtin, no-self-use, too-few-public-methods, unused-argument
+# pylint: disable = bad-whitespace
+# pylint: disable = invalid-name
+# pylint: disable = missing-docstring
+# pylint: disable = no-self-use
+# pylint: disable = too-few-public-methods
+# pylint: disable = unused-argument
 
 # --------------------
 # StrategyPattern10.py
@@ -40,18 +45,18 @@ class Movie :
         self.title = title
         self.set_price(price)
 
-    """
-    price
-        get_amount()
-    """
     def get_amount (self, days_rented) : # const
+        """
+        price
+            get_amount()
+        """
         return self.price.get_amount(days_rented)
 
-    """
-    price
-        get_points()
-    """
     def get_points (self, days_rented) :
+        """
+        price
+            get_points()
+        """
         return self.price.get_points(days_rented)
 
     def get_output (self, days_rented) : # const
@@ -73,11 +78,11 @@ class Rental :
         self.movie       = movie
         self.days_rented = days_rented
 
-    """
-    movie()
-        get_amount()
-    """
     def get_amount (self) : # const
+        """
+        movie()
+            get_amount()
+        """
         return self.movie.get_amount(self.days_rented)
 
     def get_days_rented (self) : # const # no longer used
@@ -86,18 +91,18 @@ class Rental :
     def get_movie (self) : # const
         return self.movie
 
-    """
-    movie
-        get_output()
-    """
     def get_output (self) : # const
+        """
+        movie
+            get_output()
+        """
         return self.movie.get_output(self.days_rented)
 
-    """
-    movie
-        get_points()
-    """
     def get_points (self) : # const
+        """
+        movie
+            get_points()
+        """
         return self.movie.get_points(self.days_rented)
 
 class Customer :
@@ -111,13 +116,13 @@ class Customer :
     def get_name (self) : # const
         return self.name
 
-    """
-    iter(rentals).next()
-        get_amount()
-        get_points()
-        get_output()
-    """
     def statement (self) : # O(n)
+        """
+        iter(rentals).next()
+            get_amount()
+            get_points()
+            get_output()
+        """
         amount  = sum(map(Rental.get_amount, self.rentals))
         points  = sum(map(Rental.get_points, self.rentals))
         result  =                  \
