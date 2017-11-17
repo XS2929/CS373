@@ -33,9 +33,9 @@ class Movie {
     }
 
 abstract class Price {
-    + double getCharge (int daysRented)
+    + {abstract} double getCharge (int daysRented)
+    + {abstract} int getPriceCode ()
     + int getFrequentRenterPoints (int daysRented)
-    + int getPriceCode ()
     }
 
 class ChildrensPrice {

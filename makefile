@@ -137,6 +137,7 @@ sync:
     --include "With.py"                      \
     --include "RegExps.py"                   \
     --include "Strings.py"                   \
+    --include "Reflection.py"                \
     --exclude "*"                            \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete              \
@@ -177,6 +178,7 @@ sync:
     --include "DynamicBinding.java"          \
     --include "SingletonPattern1.java"       \
     --include "SingletonPattern2.java"       \
+    --include "Reflection.java"              \
     --exclude "*"                            \
     ../../examples/java/ examples
 	@rsync -r -t -u -v --delete              \
