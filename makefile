@@ -179,6 +179,7 @@ sync:
     --include "DynamicBinding.java"        \
     --include "SingletonPattern1.java"     \
     --include "SingletonPattern2.java"     \
+    --include "MethodOverriding2.java"     \
     --include "StrategyPattern7.java"      \
     --include "Reflection.java"            \
     --include "StrategyPattern8.java"      \
