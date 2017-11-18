@@ -5,14 +5,14 @@ Rental   o- "1" Movie
 class Customer {
     - String _name
     - Vector<Rental> _rentals
-    + Customer (String)
+    + Customer (String name)
     + String statement ()
     }
 
 class Rental {
     - int _daysRented
     - Movie _movie
-    + Rental (Movie, int)
+    + Rental (Movie, int daysRented)
     + double getCharge ()
     + int getDaysRented ()
     + int getFrequentRenterPoints ()
@@ -22,7 +22,7 @@ class Rental {
 class Movie {
     - int _priceCode
     - String _title
-    + Movie (String, int)
+    + Movie (String title, int priceCode)
     + int getPriceCode ()
     + String getTitle ()
     }

@@ -9,7 +9,7 @@ Price    ^-- RegularPrice
 class Customer {
     - String _name
     - Vector<Rental> _rentals
-    + Customer (String)
+    + Customer (String name)
     + double getTotalCharge ()
     + int getTotalFrequentRenterPoints ()
     + String statement ()
@@ -18,7 +18,7 @@ class Customer {
 class Rental {
     - int _daysRented
     - Movie _movie
-    + Rental (Movie, int)
+    + Rental (Movie, int daysRented)
     + double getCharge ()
     + int getDaysRented ()
     + int getFrequentRenterPoints ()
@@ -28,7 +28,7 @@ class Rental {
 class Movie {
     - Price _price
     - String _title
-    + Movie (String, int)
+    + Movie (String title, int priceCode)
     + double getCharge (int daysRented)
     + int getFrequentRenterPoints (int daysRented)
     + int getPriceCode ()
