@@ -16,23 +16,28 @@ x = A()
 assert isinstance(x, A)
 assert x.f() == "A.f()"
 
-c = type(A())
-assert isinstance(c, type)
-x = c()
+c1 = type(A())
+assert isinstance(c1, type)
+assert c1 is type(A())
+x = c1()
 assert isinstance(x, A)
 assert x.f() == "A.f()"
 
-c = A().__class__
-assert isinstance(c, type)
-x = c()
+c2 = A().__class__
+assert isinstance(c2, type)
+assert c2 is A().__class__
+assert c1 is c2
+x = c2()
 assert isinstance(x, A)
 assert x.f() == "A.f()"
 
 d = globals()
 assert isinstance(d, dict)
-c = d["A"]
-assert isinstance(c, type)
-x = c()
+c3 = d["A"]
+assert isinstance(c3, type)
+assert c3 is d["A"]
+assert c1 is c3
+x = c3()
 assert isinstance(x, A)
 assert x.f() == "A.f()"
 
