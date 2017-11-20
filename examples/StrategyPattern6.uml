@@ -33,6 +33,7 @@ class Movie {
     + int getFrequentRenterPoints (int daysRented)
     + int getPriceCode ()
     + String getTitle ()
+    + void setPriceCode (int priceCode)
     }
 
 abstract class Price {

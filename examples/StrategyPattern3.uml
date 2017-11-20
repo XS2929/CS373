@@ -25,6 +25,7 @@ class Movie {
     + Movie (String title, int priceCode)
     + int getPriceCode ()
     + String getTitle ()
+    + void setPriceCode (int priceCode)
     }
 
 @enduml
