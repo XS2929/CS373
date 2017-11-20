@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 
-#pylint: disable = no-self-use, too-few-public-methods
+# pylint: disable = bad-whitespace
+# pylint: disable = invalid-name
+# pylint: disable = literal-comparison
+# pylint: disable = missing-docstring
+# pylint: disable = no-self-use
+# pylint: disable = too-few-public-methods
 
 # -------------
 # Reflection.py
