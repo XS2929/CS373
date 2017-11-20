@@ -41,18 +41,18 @@ abstract class Price {
     + int getFrequentRenterPoints (int daysRented)
     }
 
-class ChildrensPrice << (S,red) >> {
+class ChildrensPrice << (S, red) >> {
     + double getCharge (int daysRented)
     + int getPriceCode ()
     }
 
-class NewReleasePrice << (S,red) >> {
+class NewReleasePrice << (S, red) >> {
     + double getCharge (int daysRented)
     + int getFrequentRenterPoints (int daysRented)
     + int getPriceCode ()
     }
 
-class RegularPrice << (S,red) >> {
+class RegularPrice << (S, red) >> {
     + double getCharge (int daysRented)
     + int getPriceCode ()
     }
