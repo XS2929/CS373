@@ -6,6 +6,8 @@ class Customer {
     - String _name
     - Vector<Rental> _rentals
     + Customer (String name)
+    + void addRental (Rental)
+    + String getName ()
     + double getTotalCharge ()
     + int getTotalFrequentRenterPoints ()
     + String statement ()
