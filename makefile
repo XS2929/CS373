@@ -166,6 +166,7 @@ sync:
     --include "StrategyPattern4.uml"       \
     --include "StrategyPattern5.uml"       \
     --include "StrategyPattern6.uml"       \
+    --include "StrategyPattern7.uml"       \
     --exclude "*"                          \
     ../../examples/uml/ examples
 	@rsync -r -t -u -v --delete            \
