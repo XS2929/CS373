@@ -1,11 +1,11 @@
 @startuml
-Customer      *- "*" Rental
-Rental        o- "1" Movie
-Movie         *- "1" Price
-Price         ^-- AbstractPrice
-AbstractPrice ^-- ChildrensPrice
-AbstractPrice ^-- NewReleasePrice
-AbstractPrice ^-- RegularPrice
+Customer      *-   "*" Rental
+Rental        o-   "1" Movie
+Movie         *-   "1" Price
+Price         <|-- AbstractPrice
+AbstractPrice <|-- ChildrensPrice
+AbstractPrice <|-- NewReleasePrice
+AbstractPrice <|-- RegularPrice
 
 class Customer {
     - String _name
@@ -43,6 +43,7 @@ interface Price {
     + double getAmount (int daysRented)
     + int getPoints (int daysRented)
     + String getPriceCode ()
+    }
 
 abstract class AbstractPrice {
     + int getPoints (int daysRented)
