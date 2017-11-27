@@ -139,6 +139,7 @@ sync:
     --include "Strings.py"                 \
     --include "Reflection.py"              \
     --include "StrategyPattern10.py"       \
+    --include "Decorators.py"              \
     --exclude "*"                          \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete            \
@@ -188,6 +189,7 @@ sync:
     --include "StrategyPattern8.java"      \
     --include "StrategyPattern9.java"      \
     --include "StrategyPattern10.java"     \
+    --include "CreationalPattern.java"     \
     --exclude "*"                          \
     ../../examples/java/ examples
 	@rsync -r -t -u -v --delete            \
