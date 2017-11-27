@@ -22,20 +22,25 @@ Developed in 1989 by Guido van Rossum of the Netherlands, now at Dropbox.
 Python is procedural, object-oriented, dynamically typed, and garbage collected.
 
 
+
 % which python
 /usr/local/bin/python
+
 
 
 % python --version
 Python 2.7.12
 
 
+
 % which python3
 /usr/local/bin/python3
 
 
+
 % python3 --version
 Python 3.5.2
+
 
 
 % python3 Hello.py
@@ -55,18 +60,20 @@ Python 3.5.2 (default, Aug 22 2016, 14:49:41)
 Type "help", "copyright", "credits" or "license" for more information.
 
 
+
 >>> import Hello
 Nothing to be done.
 
 
+
 >>> quit()
+
 
 
 % python3
 Python 3.5.2 (default, Nov 17 2016, 17:05:23)
 [GCC 5.4.0 20160609] on linux
 Type "help", "copyright", "credits" or "license" for more information.
-
 
 >>> help()
 
@@ -83,6 +90,7 @@ To get a list of available modules, keywords, symbols, or topics, type
 "modules", "keywords", "symbols", or "topics".  Each module also comes
 with a one-line summary of what it does; to list the modules whose name
 or summary contain a given string such as "spam", type "modules spam".
+
 
 
 help> range
@@ -173,12 +181,11 @@ has the same effect as typing a particular string at the help> prompt.
 >>> quit()
 
 
+
 % python3
 Python 3.5.2 (default, Nov 17 2016, 17:05:23)
 [GCC 5.4.0 20160609] on linux
 Type "help", "copyright", "credits" or "license" for more information.
-
-
 
 >>> import __hello__
 Hello world!
