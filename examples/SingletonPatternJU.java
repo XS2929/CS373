@@ -45,7 +45,7 @@ class Lazy2 {
     public String f () {
         return "Lazy2.f()";}}
 
-public final class SingletonPattern extends TestCase {
+public final class SingletonPatternJU extends TestCase {
     public void test_1 () {
     	assertEquals(Eager.only(), Eager.only());}
 
@@ -65,4 +65,4 @@ public final class SingletonPattern extends TestCase {
     	assertEquals("Lazy2.f()", Lazy2.only().f());}
 
     public static void main (String[] args) {
-        TestRunner.run(new TestSuite(SingletonPatternT.class));}}
+        TestRunner.run(new TestSuite(SingletonPatternJU.class));}}

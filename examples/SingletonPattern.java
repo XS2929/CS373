@@ -41,7 +41,7 @@ class Lazy2 {
     public String f () {
         return "Lazy2.f()";}}
 
-public final class SingletonPattern1 {
+public final class SingletonPattern {
     public static void test () {
     	assert(Eager.only()     == Eager.only());
     	assert(Eager.only().f() == "Eager.f()");
