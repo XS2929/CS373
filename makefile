@@ -140,6 +140,8 @@ sync:
     --include "Reflection.py"              \
     --include "StrategyPattern10.py"       \
     --include "Decorators.py"              \
+    --include "SingletonPattern.py"        \
+    --include "SingletonPatternUT.py"      \
     --exclude "*"                          \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete            \
@@ -190,6 +192,7 @@ sync:
     --include "StrategyPattern9.java"      \
     --include "StrategyPattern10.java"     \
     --include "CreationalPattern.java"     \
+    --include "FactoryMethodPattern.java"  \
     --exclude "*"                          \
     ../../examples/java/ examples
 	@rsync -r -t -u -v --delete            \
